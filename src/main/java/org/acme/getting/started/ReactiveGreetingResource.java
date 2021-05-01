@@ -55,7 +55,7 @@ public class ReactiveGreetingResource {
     }
 
     @GET
-    @Path("/jwon/{keyword:.*}")
+    @Path("{keyword:.*}")
     public String searchByKeywords(@PathParam("keyword") List<PathSegment> keywords) {
         return keywords.toString();
     }
